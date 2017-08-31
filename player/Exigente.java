@@ -5,6 +5,8 @@ import utils.Dice;
 
 public class Exigente extends Player {
 
+	public static final String NAME = "Exigente";
+	
 	public Exigente(int coins, Dice d6) {
 		super(coins, d6);
 	}
@@ -16,5 +18,9 @@ public class Exigente extends Player {
 		}
 		return false;
 	}
-
+	
+	@Override
+	public String getName() {
+		return NAME;
+	}
 }

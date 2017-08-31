@@ -47,4 +47,6 @@ public abstract class Player {
 		mBoardPos += mD6.roll();
 		return mBoardPos;
 	}
+	
+	public abstract String getName();
 }

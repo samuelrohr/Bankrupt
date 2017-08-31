@@ -1,3 +1,4 @@
+package main;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -17,6 +18,7 @@ public class Game {
 	private static final int BOARD_TOTAL_PIECES = 20;
 	public static final int ROUND_MAX_COUNT = 1000;
 	private static final int PAYMENT = 100;
+	private static final int INIT_PAYMENT = 300;
 	
 	private List<String[]> mGameConfig;
 	private Propertie[] mBoard = new Propertie[BOARD_TOTAL_PIECES];
@@ -128,10 +130,10 @@ public class Game {
 	 */
 	private void initMatchOrder() {
 		mPlayers = new ArrayList<Player>();
-		mPlayers.add(new Impulsivo(500, d6));
-		mPlayers.add(new Cauteloso(500, d6));
-		mPlayers.add(new Exigente(500, d6));
-		mPlayers.add(new Aleatorio(500, d6));
+		mPlayers.add(new Impulsivo(INIT_PAYMENT, d6));
+		mPlayers.add(new Cauteloso(INIT_PAYMENT, d6));
+		mPlayers.add(new Exigente(INIT_PAYMENT, d6));
+		mPlayers.add(new Aleatorio(INIT_PAYMENT, d6));
 		
 		//Ordena os players por iniciativa
 		Collections.sort(mPlayers, new Comparator<Player>() {

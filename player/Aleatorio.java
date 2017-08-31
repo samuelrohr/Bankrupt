@@ -5,6 +5,7 @@ import utils.Dice;
 
 public class Aleatorio extends Player {
 
+	public static final String NAME = "Aleatório";
 	private Dice d2;
 	
 	public Aleatorio(int coins, Dice d6) {
@@ -21,4 +22,8 @@ public class Aleatorio extends Player {
 		return false;
 	}
 
+	@Override
+	public String getName() {
+		return NAME;
+	}
 }
