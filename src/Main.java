@@ -49,15 +49,15 @@ public class Main {
 				playerAleatorioWinCount,
 				(float)playerAleatorioWinCount/300*100);
 		String cautelosoWinCountText = String.format(WIN_COUNT_TEXT,
-				Aleatorio.class.getName(),
+				Cauteloso.class.getName(),
 				playerCautelosoWinCount,
 				(float)playerCautelosoWinCount/300*100);
 		String exigenteWinCountText = String.format(WIN_COUNT_TEXT,
-				Aleatorio.class.getName(),
+				Exigente.class.getName(),
 				playerExigenteWinCount,
 				(float)playerExigenteWinCount/300*100);
 		String impulsivoWinCountText = String.format(WIN_COUNT_TEXT,
-				Aleatorio.class.getName(),
+				Impulsivo.class.getName(),
 				playerImpulsivoWinCount,
 				(float)playerImpulsivoWinCount/300*100);
 		System.out.println(aleatorioWinCountText);

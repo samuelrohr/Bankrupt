@@ -138,9 +138,9 @@ public class Game {
 			@Override
 			public int compare(Player p1, Player p2) {
 				if(p1.getInitiative() > p2.getInitiative()) {
-					return 1;
-				} else if(p1.getInitiative() < p2.getInitiative()) {
 					return -1;
+				} else if(p1.getInitiative() < p2.getInitiative()) {
+					return 1;
 				} else {
 					return 0;
 				}
