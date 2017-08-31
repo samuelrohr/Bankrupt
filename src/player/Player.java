@@ -1,14 +1,10 @@
 package player;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import model.Propertie;
 import utils.Dice;
 
 public abstract class Player {
 	protected int mCoins;
-	private List<Propertie> mProperties;
 	private int mBoardPos;
 	private Dice mD6;
 	private int mInitiative;
@@ -21,19 +17,14 @@ public abstract class Player {
 	public Player(int coins, Dice d6) {
 		mBoardPos = 0;
 		mCoins = coins;
-		mProperties = new ArrayList<Propertie>();
 		mD6 = d6;
 		mInitiative = d6.roll();
 	}
 	
 	public abstract boolean wantToBuy(Propertie currPropertie);
-	
+
 	public int getCoins() {
 		return mCoins;
-	}
-	
-	public List<Propertie> getProperties() {
-		return mProperties;
 	}
 	
 	public int getPosition() {

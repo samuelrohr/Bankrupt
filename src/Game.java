@@ -72,6 +72,7 @@ public class Game {
 					//Se o player realmente tem dinheiro pra comprar
 					if(player.getCoins() >= overPropertie.getBuyCost()) {
 						overPropertie.buy(player);
+						player.deductValue(overPropertie.getBuyCost());
 					}
 				}
 			} 
@@ -127,10 +128,10 @@ public class Game {
 	 */
 	private void initMatchOrder() {
 		mPlayers = new ArrayList<Player>();
-		mPlayers.add(new Impulsivo(100, d6));
-		mPlayers.add(new Cauteloso(100, d6));
-		mPlayers.add(new Exigente(100, d6));
-		mPlayers.add(new Aleatorio(100, d6));
+		mPlayers.add(new Impulsivo(500, d6));
+		mPlayers.add(new Cauteloso(500, d6));
+		mPlayers.add(new Exigente(500, d6));
+		mPlayers.add(new Aleatorio(500, d6));
 		
 		//Ordena os players por iniciativa
 		Collections.sort(mPlayers, new Comparator<Player>() {
@@ -205,9 +206,10 @@ public class Game {
 	 */
 	private void playerLose(Player player) {
 		//Libera propriedades que o player era dono
-		List<Propertie> playerProperties = player.getProperties();
-		for(Propertie propertie : playerProperties) {
-			propertie.removeOwner();
+		for(Propertie propertie : mBoard) {
+			if(propertie.getOwner() == player) {
+				propertie.removeOwner();
+			}
 		}
 		mPlayers.remove(player);
 	}

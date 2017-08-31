@@ -7,11 +7,15 @@ public class Dice {
 	private Random mRandom;
 	
 	public Dice(int facesNumber) {
-		mFacesNumber = facesNumber + 1;
+		mFacesNumber = facesNumber;
 		mRandom = new Random(); 
 	}
 	
+	/**
+	 * Retornar o valor de 1 até o numero de faces setado
+	 * @return
+	 */
 	public int roll() {
-		return mRandom.nextInt(mFacesNumber);
+		return mRandom.nextInt(mFacesNumber) + 1;
 	}
 }

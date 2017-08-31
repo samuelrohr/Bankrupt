@@ -15,7 +15,7 @@ public class Aleatorio extends Player {
 
 	@Override
 	public boolean wantToBuy(Propertie currPropertie) {
-		if(d2.roll() == 0) {
+		if(d2.roll() == 1) {
 			return true;
 		}
 		return false;
