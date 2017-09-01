@@ -1,6 +1,6 @@
 package model;
 
-import player.Player;
+import model.player.Player;
 
 public class Propertie {
 	

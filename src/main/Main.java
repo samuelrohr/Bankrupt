@@ -1,6 +1,6 @@
 package main;
-import player.Aleatorio;
-import player.*;
+
+import model.player.*;
 
 public class Main {
 

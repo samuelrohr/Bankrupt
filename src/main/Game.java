@@ -1,15 +1,16 @@
 package main;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
 import model.Propertie;
-import player.Aleatorio;
-import player.Cauteloso;
-import player.Exigente;
-import player.Impulsivo;
-import player.Player;
+import model.player.Aleatorio;
+import model.player.Cauteloso;
+import model.player.Exigente;
+import model.player.Impulsivo;
+import model.player.Player;
 import utils.Dice;
 import utils.FileReader;
 
